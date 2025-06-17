@@ -56,4 +56,11 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
         return ResponseEntity.noContent().build();
     }
+    
+    @GetMapping("/validate/{id}")
+	public ResponseEntity<String> validateAsif(@PathVariable Long id) {
+	    return employeeService.getEmployeeById(id)
+	            .map(emp -> ResponseEntity.ok("Name: " + emp.getEmpName() + " with Email: " + emp.getEmail()))
+	            .orElse(ResponseEntity.status(404).body("No employee found with ID " + id + " having name  and email"));
+	}
 }
