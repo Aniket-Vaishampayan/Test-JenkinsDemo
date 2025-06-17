@@ -57,7 +57,7 @@ public class EmployeeController {
         return ResponseEntity.noContent().build();
     }
     
-    @GetMapping("/validate/{id}")
+    @GetMapping("/name-and-email/{id}")
 	public ResponseEntity<String> validateAsif(@PathVariable Long id) {
 	    return employeeService.getEmployeeById(id)
 	            .map(emp -> ResponseEntity.ok("Name: " + emp.getEmpName() + " with Email: " + emp.getEmail()))
