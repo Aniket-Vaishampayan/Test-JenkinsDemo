@@ -1,13 +1,13 @@
-package com.example.SpringActuatorWithEmailDemo;
+package com.example.DemoEmployee;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringActuatorWithEmailDemoApplication {
+public class DemoEmployee {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringActuatorWithEmailDemoApplication.class, args);
+		SpringApplication.run(DemoEmployee.class, args);
 	}
 
 }
