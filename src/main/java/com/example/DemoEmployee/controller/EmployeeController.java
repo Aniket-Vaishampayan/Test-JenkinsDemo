@@ -58,7 +58,7 @@ public class EmployeeController {
     }
     
     @GetMapping("/name-and-email/{id}")
-	public ResponseEntity<String> validateAsif(@PathVariable Long id) {
+	public ResponseEntity<String> getNameAndEmail(@PathVariable Long id) {
 	    return employeeService.getEmployeeById(id)
 	            .map(emp -> ResponseEntity.ok("Name: " + emp.getEmpName() + " with Email: " + emp.getEmail()))
 	            .orElse(ResponseEntity.status(404).body("No employee found with ID " + id + " having name  and email"));
